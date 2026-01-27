@@ -1,4 +1,4 @@
-# Personal Machine Learning Learning Log
+# Personal Machine Learning Notes
 
 This document is a **living record** of your learning journey. It is designed so that you can:
 - Revisit *exact questions you asked*
