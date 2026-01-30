@@ -35,21 +35,14 @@ $$
 
 ## 3. Loss + regularization = total objective
 
-$$
-\text{Total Loss}(w)
-=
-\text{Data Loss}(w)
-+
-\text{Penalty}(w)
-$$
+$\text{Total Loss}(w)$ =
+$\text{Data Loss}(w)$ +
+$\text{Penalty}(w)$
 
-$$
-\nabla \text{Total Loss}
-=
-\nabla \text{Data Loss}
-+
-\nabla \text{Penalty}
-$$
+
+$\nabla \text{Total Loss}$ =
+$\nabla \text{Data Loss}$ +
+$\nabla \text{Penalty}$
 
 ---
 
@@ -66,19 +59,13 @@ $$
 
 ### L1 penalty gradient (non-zero)
 
-$$
-\frac{d}{dw_j}(\lambda |w_j|)
-=
-\lambda \cdot \text{sign}(w_j)
-$$
 
+$\frac{d}{dw_j}(\lambda |w_j|)$ =
+$\lambda \cdot \text{sign}(w_j)$
 ### Subgradient at zero
 
-$$
-\partial(\lambda |w_j|)
-=
-[-\lambda, +\lambda]
-$$
+$\partial(\lambda |w_j|)$ =
+$[-\lambda, +\lambda]$
 
 ---
 
@@ -95,20 +82,18 @@ $$
 ---
 
 ## 7. Data loss and gradient
+### Data loss
 
-$$
-\text{Data Loss}(w)
-=
-\frac{1}{2}\lVert y - Xw \rVert_2^2
-=
-\frac{1}{2} r^T r
-$$
 
-$$
-\frac{\partial \text{Data Loss}}{\partial w_j}
+L(w)= $\frac{1}{2} (y - Xw)^T (y - Xw)$
+
+
+### Gradient with respect to weight $\( w_j \)$
+
+$\frac{\partial L}{\partial w_j}$
 =
-- x_j^T r
-$$
+$- x_j^T r$
+
 
 ---
 
