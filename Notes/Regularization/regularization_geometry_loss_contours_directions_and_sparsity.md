@@ -204,9 +204,7 @@ Below are **three visual cases** you should always keep in mind. These are *loss
 
 #### Case A: Uncorrelated features (round bowl)
 
-```md
 ![Uncorrelated features – circular contours](images/contours_uncorrelated.png)
-```
 
 **What this shows**:
 - Features act independently
@@ -220,9 +218,7 @@ Below are **three visual cases** you should always keep in mind. These are *loss
 
 #### Case B: Slightly correlated features (mildly stretched bowl)
 
-```md
 ![Slightly correlated features – elliptical contours](images/contours_slightly_correlated.png)
-```
 
 **What this shows**:
 - Some directions matter more than others
@@ -236,9 +232,7 @@ Below are **three visual cases** you should always keep in mind. These are *loss
 
 #### Case C: Highly correlated features (flat valley)
 
-```md
 ![Highly correlated features – stretched contours](images/contours_highly_correlated.png)
-```
 
 **What this shows**:
 - Many combinations of weights give similar predictions
@@ -398,9 +392,7 @@ The final solution is where these two balance.
 
 Insert the following image in this section:
 
-```md
 ![Loss contours with regularization directions](loss_contours_regularization.png)
-```
 
 That image should show:
 - elliptical loss contours
@@ -452,9 +444,7 @@ Each point = **one model**.
 
 ## 2. Loss surface & contours (data fitting only)
 
-```md
 ![Loss contours from squared error](images/contours_uncorrelated.png)
-```
 
 ### What this image means
 - Each closed curve is a **contour**
@@ -471,9 +461,7 @@ Each point = **one model**.
 
 ### (a) Uncorrelated features
 
-```md
 ![Uncorrelated features](images/contours_uncorrelated.png)
-```
 
 - Loss increases equally in all directions
 - Contours look almost **circular**
@@ -485,9 +473,7 @@ Mental model:
 
 ### (b) Slightly correlated features
 
-```md
 ![Slightly correlated features](images/contours_slightly_correlated.png)
-```
 
 - Some directions matter more than others
 - Contours become **elliptical**
@@ -499,9 +485,7 @@ Mental model:
 
 ### (c) Highly correlated features
 
-```md
 ![Highly correlated features](images/contours_highly_correlated.png)
-```
 
 - One direction is almost flat
 - Contours look like **parallel diagonal lines** locally
@@ -513,9 +497,7 @@ Mental model:
 
 ## 4. How training moves (gradient direction)
 
-```md
 ![Gradient direction perpendicular to contours](images/gradient_perpendicular.png)
-```
 
 ### Arrow explanation
 - The arrow shows **gradient descent**
@@ -529,9 +511,7 @@ Why?
 
 ## 5. Two competing forces (this is the core idea)
 
-```md
 ![Loss vs regularization directions](images/loss_vs_regularization_directions.png)
-```
 
 ### Annotations in the image
 - **Green arrow** → pull of data fitting (toward best-fit weights)
@@ -543,9 +523,8 @@ Why?
 
 ## 6. Regularization shapes
 
-```md
 ![L2 circle and L1 diamond](images/l1_l2_geometry.png)
-```
+
 
 ### L2 (Ridge)
 - Shape: **circle**
@@ -578,20 +557,3 @@ So the final solution is a **compromise** between:
 > **Squared error creates a bowl-shaped loss surface; contours show equal loss, gradient descent moves perpendicular to them, and regularization adds a competing pull toward zero whose geometry (circle vs diamond) determines shrinkage or sparsity.**
 
 ---
-
-## 9. Image checklist for your repo
-
-Place these files in your repository:
-
-```
-images/
- ├─ contours_uncorrelated.png
- ├─ contours_slightly_correlated.png
- ├─ contours_highly_correlated.png
- ├─ gradient_perpendicular.png
- ├─ loss_vs_regularization_directions.png
- └─ l1_l2_geometry.png
-```
-
-This single page + these images fully explain the geometry of regression and regularization.
-
