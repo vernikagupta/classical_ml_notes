@@ -9,9 +9,9 @@ This is written so you can follow it **line by line with pen and paper**.
 
 For linear regression:
 
-\[
+$$
 L(w) = \frac{1}{2} \| y - Xw \|^2
-\]
+$$
 
 ---
 
@@ -19,31 +19,31 @@ L(w) = \frac{1}{2} \| y - Xw \|^2
 
 Expand the squared norm:
 
-\[
+$$
 \begin{aligned}
 L(w)
 &= \frac{1}{2}(y - Xw)^T (y - Xw) \\
 &= \frac{1}{2} y^T y - w^T X^T y + \frac{1}{2} w^T X^T X w
 \end{aligned}
-\]
+$$
 
 ---
 
 ## 3. Identify what controls the *shape*
 
-- \(\frac{1}{2} y^T y\) → constant (does not affect geometry)
-- \(- w^T X^T y\) → shifts the minimum
-- \(\frac{1}{2} w^T X^T X w\) → **controls curvature and shape**
+- $\(\frac{1}{2} y^T y\)$ → constant (does not affect geometry)
+- $\(- w^T X^T y\)$ → shifts the minimum
+- $\(\frac{1}{2} w^T X^T X w\)$ → **controls curvature and shape**
 
 👉 **Contours depend only on the quadratic term**
 
 So for contours, we study:
 
-\[
+$$
 \boxed{
 w^T X^T X w = c
 }
-\]
+$$
 
 ---
 
@@ -51,13 +51,13 @@ w^T X^T X w = c
 
 For our smallest example:
 
-\[
+$$
 X^T X =
 \begin{bmatrix}
 2 & 1 \\
 1 & 2
 \end{bmatrix}
-\]
+$$
 
 This is the **Gram matrix**:
 - diagonal → feature strength
@@ -67,21 +67,20 @@ This is the **Gram matrix**:
 
 ## 5. Write the parameter vector
 
-\[
+$$
 w =
 \begin{bmatrix}
 w_1 \\
 w_2
 \end{bmatrix}
-\]
-
----
-
+$$
+--
 ## 6. Compute the quadratic form
 
-\[
+$$
+\begin{aligned}
 w^T (X^T X) w
-=
+&=
 \begin{bmatrix}
 w_1 & w_2
 \end{bmatrix}
@@ -93,11 +92,15 @@ w_1 & w_2
 w_1 \\
 w_2
 \end{bmatrix}
-\]
+\end{aligned}
+$$
 
 First multiplication:
 
-\[
+$$
+\begin{aligned}
+(X^T X) w
+&=
 \begin{bmatrix}
 2 & 1 \\
 1 & 2
@@ -106,32 +109,28 @@ First multiplication:
 w_1 \\
 w_2
 \end{bmatrix}
-=
-\begin{bmatrix}
-2w_1 + w_2 \\
-w_1 + 2w_2
-\end{bmatrix}
-\]
+\end{aligned}
+$$
 
 Second multiplication:
 
-\[
+$$
 \begin{aligned}
 w^T X^T X w
 &= w_1(2w_1 + w_2) + w_2(w_1 + 2w_2) \\
 &= 2w_1^2 + 2w_1 w_2 + 2w_2^2
 \end{aligned}
-\]
+$$
 
 ---
 
 ## 7. The contour equation (ellipse)
 
-\[
+$$
 \boxed{
 2w_1^2 + 2w_1 w_2 + 2w_2^2 = c
 }
-\]
+$$
 
 This is the **equation of an ellipse** in parameter space.
 
@@ -153,18 +152,18 @@ This is the **equation of an ellipse** in parameter space.
 
 Eigen-decomposition:
 
-\[
+$$
 X^T X = Q \Lambda Q^T
-\]
+$$
 
 - Columns of \(Q\) → **principal directions**
 - Diagonal of \(\Lambda\) → **curvature along those directions**
 
 In eigen-coordinates \(z = Q^T w\):
 
-\[
+$$
 \lambda_1 z_1^2 + \lambda_2 z_2^2 = c
-\]
+$$
 
 This is an **axis-aligned ellipse**.
 
