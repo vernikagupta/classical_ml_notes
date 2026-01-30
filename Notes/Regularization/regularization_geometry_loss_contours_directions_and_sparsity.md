@@ -16,15 +16,15 @@ This note is written so that you can read it *without* assuming prior geometry k
 
 In regression, we want to predict a **continuous target**:
 
-\[
+$$
 \hat{y} = Xw
-\]
+$$
 
 During training, we choose the parameters \(w\) such that the **training error** is minimized. With squared error loss:
 
-\[
+$$
 \text{Loss}(w) = \|y - Xw\|_2^2
-\]
+$$
 
 This loss is a **function of the parameters**, not of the data points.
 
@@ -47,9 +47,9 @@ When we draw axes \(w_1\) and \(w_2\), every point represents **one model**.
 
 For linear regression with squared error:
 
-\[
+$$
 \text{Loss}(w) = \|y - Xw\|_2^2
-\]
+$$
 
 This is a **quadratic function** of \(w\).
 
@@ -284,9 +284,9 @@ There are **two different centers** in this story:
 
 ### 1️⃣ Center of loss (data fit)
 
-\[
+$$
 w_{\text{OLS}} = \arg\min \|y - Xw\|^2
-\]
+$$
 
 - This is the **best-fit solution**
 - Ellipses are centered here
@@ -294,9 +294,9 @@ w_{\text{OLS}} = \arg\min \|y - Xw\|^2
 
 ### 2️⃣ Center of regularization
 
-\[
+$$
 w = 0
-\]
+$$
 
 - Zero coefficients
 - Where regularization penalty is smallest
@@ -316,9 +316,9 @@ It says:
 
 Mathematically:
 
-\[
+$$
 \min_w \; \|y - Xw\|^2 + \lambda \cdot \text{Penalty}(w)
-\]
+$$
 
 This creates a **trade-off**.
 
@@ -330,15 +330,15 @@ This creates a **trade-off**.
 
 Penalty:
 
-\[
+$$
 \lambda (w_1^2 + w_2^2)
-\]
+$$
 
 Allowed region:
 
-\[
+$$
 w_1^2 + w_2^2 \le c
-\]
+$$
 
 Shape:
 - **circle**
@@ -354,15 +354,15 @@ Effect:
 
 Penalty:
 
-\[
+$$
 \lambda (|w_1| + |w_2|)
-\]
+$$
 
 Allowed region:
 
-\[
+$$
 |w_1| + |w_2| \le c
-\]
+$$
 
 Shape:
 - **diamond**
